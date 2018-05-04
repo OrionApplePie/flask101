@@ -9,7 +9,8 @@ class Config(object):
     TESTING = False
     CSRF_ENABLE = True
     SECRET_KEY = 'very_secret_key_but_needs_2_b_changed'
-
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URI']
+    
 
 class ProductionConfig(Config):
     """docstring for ."""
